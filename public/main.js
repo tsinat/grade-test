@@ -16,6 +16,17 @@ function saveGrades(e){
     })
     .done(function(data){
         console.log(data);
+        var row = $('<tr>');
+        var td1 = $('<td>').text(data.name);
+        var td2 = $('<td>').text(data.score);
+        var td3 = $('<td>').text(data.total);
+        var td4 = $('<td>').text(data.mygrade);
+        var del = $('<button>').addClass('delete btn-danger').text('Delete');
+        var edi = $('<button>').addClass('edit btn-success').text('Edit');
+
+        row.append(td1,td2,td3,td4, del, edi);
+        $('tbody').append(row);
+
     })
     .fail(function(error){
         console.log(error);

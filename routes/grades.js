@@ -22,8 +22,9 @@ router.get('/', (req,res) =>{
 
 router.post('/', (req,res) =>{
     console.log(req.body);
-    Grade.create(req.body, err =>{
-        res.send(err);
+    Grade.create(req.body, (err, grade) =>{
+        console.log(grade);
+        res.send(grade);
     });
 });
 

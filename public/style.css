@@ -5,6 +5,9 @@ body {
     background-color:skyblue;
     color:silver;
 }
+.form{
+    padding: 40px;
+}
 h1{
     text-align: center;
 }

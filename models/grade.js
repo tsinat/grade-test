@@ -12,7 +12,7 @@ exports.create = function(grade , cb){
         var stmt = db.prepare("INSERT INTO grades VALUES (?, ?, ?, ?,?)");
         stmt.run( uuid(), grade.name, grade.score, grade.total, grade.mygrade);
         stmt.finalize(function(err){
-            cb(err);
+            cb(err, grade);
         });
     });
 };
