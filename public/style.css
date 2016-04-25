@@ -1,0 +1,17 @@
+body {
+    background-color:grey;
+}
+.navbar{
+    background-color:skyblue;
+    color:silver;
+}
+h1{
+    text-align: center;
+}
+
+.grade{
+    /*margin-left:100px;*/
+}
+.edit{
+    margin-left:10px;
+}

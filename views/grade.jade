@@ -1,0 +1,41 @@
+extends ./layout.jade
+
+block content
+    h1 My Grades
+    .container
+      table.table
+        thead
+          tr
+            th name
+            th score
+            th total
+            th Grade
+        tbody
+        - each val in grades
+          tr
+            td=val.name
+            td=val.score
+            td=val.total
+            td=val.mygrade
+            td
+                button.delete.btn-danger(id=val.id) Delete
+                button.edit.btn-success(class=val.id) Edit
+                
+        
+            
+    form.form(role='form')            
+      .row
+        .form-group.col-lg-12
+          label(for='name') Name:
+          input#name.form-control(type='text', placeholder='Name', required='')
+      .row
+        .form-group.col-lg-12
+          label(for='score') score
+          input#score.form-control(type='number', placeholder='score')
+      .row
+        .form-group.col-lg-12
+          label(for='total') total
+          input#total.form-control(type='number', placeholder='total')
+      .row
+        .form-group.col-lg-6
+          button#grade.grade.btn-primary.btn-lg(type='submit') Post
